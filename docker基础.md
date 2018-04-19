@@ -4,7 +4,7 @@ date: 2018-04-19 15:28:47
 tags: 基本命令备忘
 ---
 
->### 基本命令
+### 基本命令
 - `docker pull [imagename]`(获取远程镜像)
 - `docker images` (显示全部本地images)
 - `docker ps -a`(显示本地container)
@@ -18,7 +18,7 @@ tags: 基本命令备忘
 
 - docker exec -it [ID] bash  (使用正在运行的容器的命令行)
 
->### Dockerfile
+### Dockerfile
 - 选用远程镜像
 `FROM [远程镜像]`
 - 复制本地文件到镜像中 
