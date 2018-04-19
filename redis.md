@@ -1,8 +1,12 @@
 ---
 title: Redis 基础
 ---
+---
+date：2018年4月19日
+---
 
->### 源码安装 
+
+### 源码安装 
 - 下载
 ```
  wget http://download.redis.io/releases/redis-stable.tar.gz
@@ -36,7 +40,7 @@ exit
 
 ---
 
->### apt 安装
+### apt 安装
 ```
 apt-get install redis-server
 # 安装完成就直接启动了, 默认读取的配置文件在/etc/redis/redis.conf
@@ -48,7 +52,7 @@ systemctl stop redis-server
  
 ---
   
->### Docker
+### Docker
 ```
 docker pull redis 
 docker run -p 6380:6379 redis # 运行redis镜像映射到主机的6380端口
@@ -66,7 +70,7 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 
 ---
 
->### 常用数据结构
+### 常用数据结构
 - [Strng](http://redisdoc.com/string/index.html)
 
 - [Hash](http://redisdoc.com/hash/index.html)
@@ -79,14 +83,14 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 
 ---
 
->### 订阅 & 发布
+### 订阅 & 发布
 - 所有的订阅都是全局的。
 - 当你为一个渠道多次订阅时，这个渠道的每次消息发布，会收到多条订阅。
 - 订阅的消息可以是呈队列有序，也可以是并行的
 
 ---
 
->### 事务 
+### 事务 
 - redis 不支持回滚
 - 事务是用来保证即使你有命令的连续执行，在多并发的情况下，希望几条命令是联系执行的时候使用事务。
 - 事务中的多条命令中有一条或者以上的命令存在语法错误，那么正确的命令即使是 `EXEC` 也不会被执行 *（在Redis 2.6.5之后）* 。但是需要注意的是这种错误的事务机制仅限于语法错误。
@@ -97,14 +101,14 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 
 ---
 
->### Redis 集群
+### Redis 集群
 - Redis 集群是一个分布式（distributed）、容错（fault-tolerant）的 Redis 实现， 集群可以使用的功能是普通单机 Redis 所能使用的功能的一个子集（subset）。
 - Redis 集群中不存在中心（central）节点或者代理（proxy）节点， 集群的其中一个主要设计目标是达到线性可扩展性（linear scalability）。
 - Redis 集群为了保证一致性（consistency）而牺牲了一部分容错性： 系统会在保证对网络断线（net split）和节点失效（node failure）具有有限抵抗力的前提下， 尽可能地保持数据的一致性。
 
 ---
 
->### 索引
+### 索引
 - 跳跃表
 ```
 在跳跃表是由N层链表组成，最底层是最完整的的数据，每次数据插入，率先进入到这个链表（有序的），
@@ -134,7 +138,7 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 ```
 ---
 
->### 缓存击穿
+### 缓存击穿
 ```
 缓存一般作为RDS的前置系统和服务器直连，减轻rds的负担，常理而言。
 如果服务器查询缓存而不得的话，需要从rds中获取然后更新到缓存中，但是如果在“从rds中获取然后更新到缓存中”，
