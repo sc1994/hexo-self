@@ -40,7 +40,8 @@ exit
 
 ---
 
-### apt 安装
+### apt 
+- 安装
 ```
 apt-get install redis-server
 # 安装完成就直接启动了, 默认读取的配置文件在/etc/redis/redis.conf
@@ -53,6 +54,7 @@ systemctl stop redis-server
 ---
   
 ### Docker
+- 基本命令
 ```
 docker pull redis 
 docker run -p 6380:6379 redis # 运行redis镜像映射到主机的6380端口
@@ -118,7 +120,7 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 如果找到就返回结果，否则就在此层找到最接近查询的值，将查询操作移到另外一层，就是刚才说到来源地址，
 所在层，重复查询。
 ```
-![image](https://pic1.zhimg.com/v2-114f4895c296861aca549d96fc4b563f_r.jpg)
+![image](118.24.27.231:8088/v2-114f4895c296861aca549d96fc4b563f_r.jpg)
 
 - 单线程
 ```
@@ -139,11 +141,10 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 ---
 
 ### 缓存击穿
+- 什么是缓存击穿
 ```
 缓存一般作为RDS的前置系统和服务器直连，减轻rds的负担，常理而言。
 如果服务器查询缓存而不得的话，需要从rds中获取然后更新到缓存中，但是如果在“从rds中获取然后更新到缓存中”，
 这个阶段，缓存尚未更新成功，大量请求进来的话，rds势必压力暴增，甚至雪崩，或者歹人恶意攻击，
 一直查询rds和缓存中未存在key，也会导致缓存机制失效，rds压力暴增，称之为缓存击穿
 ```
-
----
