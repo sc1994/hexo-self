@@ -120,7 +120,7 @@ docker run -v /home/ubuntu/redis.conf:/usr/local/etc/redis/redis.conf -p 6379:63
 如果找到就返回结果，否则就在此层找到最接近查询的值，将查询操作移到另外一层，就是刚才说到来源地址，
 所在层，重复查询。
 ```
-![image](/redis-skip.jpg)
+[image](http://118.24.27.231:8088/v2-114f4895c296861aca549d96fc4b563f_r.jpg)
 
 - 单线程
 ```
