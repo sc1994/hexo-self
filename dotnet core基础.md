@@ -1,4 +1,4 @@
-### 安装（在Ubuntu上安装dotnet的编译环境）
+### 安装
 - [在Ubuntu上安装](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-current)
 - 其他 (todo)
 ---
