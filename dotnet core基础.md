@@ -1,5 +1,4 @@
-### 安装
-- 在Ubuntu上安装dotnet的编译环境
+### 安装（在Ubuntu上安装dotnet的编译环境）
 ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
@@ -18,6 +17,7 @@ dotnet build
 ```bash
 dotnet publish -c Release -o bin/Release/PublishOutput
 ```
+---
 ### Config
 - 使用ConfigurationBuilder来注入生成配置文件
 ```C#
