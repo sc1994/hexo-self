@@ -53,7 +53,7 @@ hexo new [layout] <title>
 ```
 hexo g
 ```
-    - 或者
+- 等同于
 ```
 hexo generate
 ```

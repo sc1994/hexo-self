@@ -1,5 +1,5 @@
 ### 安装（在Ubuntu上安装dotnet的编译环境）
-```bash
+```
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -10,11 +10,11 @@ sudo apt-get install dotnet-sdk-2.1.3
 ---
 ### Build
 - 编译当前目录下的代码
-```bash
+```
 dotnet build 
 ```
 - 以生产环境编译当前目录下的代码，且指定输出（相对）路径
-```bash
+```
 dotnet publish -c Release -o bin/Release/PublishOutput
 ```
 ---
