@@ -1,5 +1,5 @@
 ### 安装
-- 在 Ubuntu 上安装dotnet的编译环境
+- 在Ubuntu上安装dotnet的编译环境
 ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
