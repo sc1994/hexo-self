@@ -1,5 +1,11 @@
+---
+title: dotnet core 
+date: 2018年6月25日
+tags: 备忘
+---
+
 ### 安装
-- [Ubuntu](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-current)
+- [在Ubuntu上安装](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-current)
 - 其他 (todo)
 ---
 ### Build
