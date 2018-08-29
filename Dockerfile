@@ -1,7 +1,7 @@
 # 选择nginx服务
 FROM nginx:latest
 # copy代码
-COPY . /src
+COPY ./public /src
 # 添加nginx配置文件
 COPY nginx.conf /etc/nginx/nginx.conf
 # 去掉默认的nginx配置文件
